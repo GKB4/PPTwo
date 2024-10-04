@@ -18,17 +18,12 @@ public class Util {
         if (connection == null) {
             try {
                 connection = DriverManager.getConnection(url, user, password);
-                //System.out.println("Connected to database");
                 statement = connection.createStatement();
             } catch (SQLException e) {
                 throw new RuntimeException(e);
             }
         }
 
-    }
-
-    public static Connection getConnection() {
-        return connection;
     }
 
     public static Statement getStatement() {
